@@ -64,7 +64,7 @@ web_modules/
 # .gitignore
 .env
 .env.*
-
+public/temp/
 
 
 
