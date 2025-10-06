@@ -154,7 +154,7 @@ const deletePlaylist = asyncHandler(async (req, res) => {
   }
 
   // 3️⃣ Delete the playlist entirely
-  await playlist.remove();
+  await playlist.deleteOne(); // ✅ modern Mongoose method
 
   // 4️⃣ Send response
   return res

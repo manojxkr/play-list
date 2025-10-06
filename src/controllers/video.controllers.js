@@ -14,6 +14,7 @@ const getAllVideos = asyncHandler(async (req, res) => {
     sortType = "desc",
     userId,
   } = req.query;
+  //console.log(req.query);
 
   // Convert page & limit to numbers
   page = parseInt(page);
@@ -21,6 +22,8 @@ const getAllVideos = asyncHandler(async (req, res) => {
 
   // Build filter
   const filter = {};
+  console.log(filter);
+
   if (query) {
     filter.title = { $regex: query, $options: "i" }; // case-insensitive search on title
   }
